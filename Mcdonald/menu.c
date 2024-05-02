@@ -16,18 +16,8 @@ void getmenu() {
     sscanf(buf, "%d %d", &single_food_num, &type_num);
 
     // 将每个单独的食物读入到single_food数组中, 下标从1开始
-    char ch;
     for(int i = 1; i <= single_food_num; ++i) {
-        int index = 0;
-        ch = fgetc(fp);
-        // 防止有多个空格干扰
-        while(ch == ' ') ch = fgetc(fp);
-        while(1) {
-            if(ch == '\n' || ch == ' ') break;
-            sfood[i].food_name[index++] = ch;
-            ch = fgetc(fp);
-        }
-        sfood[i].food_name[index] = '\0'; // 加入字符串结束符
+        fscanf(fp, "%s", &sfood[i].food_name);
     }
 
     // 开始读入每个菜单套餐的制作时间和最大库存
@@ -41,6 +31,7 @@ void getmenu() {
 
     // 开始读入套餐
     char namebuf[MAXFOODNAMELEN] = {0}; // 套餐名缓冲区
+    char ch;
     for(int i = 1; i <= type_num; ++i) {
         // 开始读入
         ch = fgetc(fp);
