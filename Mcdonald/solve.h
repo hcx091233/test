@@ -3,9 +3,9 @@
 
 // 定义各种常量
 #define MAXFIRSTLINE 20     // 文件第一行最大长度
-#define MAXFOODNAMELEN 50   // 食物名字最长数
-#define MAXTYPENAME 50      // 套餐名称最长数
-#define MAXINPUTBUFLEN 50   // 读入缓冲区长度, 用于读入时间和食物名
+#define MAXFOODNAMELEN 51   // 食物名字最长数
+#define MAXTYPENAME 51      // 套餐名称最长数
+#define MAXINPUTBUFLEN 51   // 读入缓冲区长度, 用于读入时间和食物名
 #define MAXTIMELEN 10       // 格式化时间最长缓冲区
 
 #define start_time 7 * 3600 // 开业时间07:00:00对应的秒数

@@ -66,20 +66,20 @@ void getmenu() {
     // 文件读入结束, 关闭文件
     fclose(fp);
 
-    /*
+    // /*
     // 以下是用于测试读入文件的代码, 输出id对应的食物名, 以及套餐包含的食物名及其id
     for(int i = 1; i <= single_food_num; ++i) {
         printf("%d: %s\n", i, sfood[i].food_name);
     }
 
     for(int i = 1; i <= type_num; ++i) {
-        printf("%s: ", tfood[i].type_name);
+        printf("%d: %s: ", i, tfood[i].type_name);
         for(int j = 0; tfood[i].food_id[j] <= single_food_num && tfood[i].food_id[j] >= 1; ++j) {
-            printf("%d: %s", tfood[i].food_id[j], sfood[tfood[i].food_id[j]].food_name);
+            printf("%d: %s ", tfood[i].food_id[j], sfood[tfood[i].food_id[j]].food_name);
         }
         putchar('\n');
     }
-    */
+    // */
 }
 
 // 获取食物id
